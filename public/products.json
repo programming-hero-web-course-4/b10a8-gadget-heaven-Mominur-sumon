@@ -1,0 +1,279 @@
+[
+    {
+        "product_id": 1,
+        "product_title": "Laptop X200",
+        "product_image": "https://i.ibb.co.com/1rF4JH1/x200.webp",
+        "category": "laptops",
+        "price": 999.99,
+        "description": "High-performance laptop with advanced processing power.",
+        "specifications": [
+            "16GB RAM",
+            "512GB SSD",
+            "Intel i7 Processor"
+        ],
+        "availability": true,
+        "rating": 4.6
+    },
+    {
+        "product_id": 2,
+        "product_title": "MacBook Pro 14",
+        "product_image": "https://i.ibb.co.com/DkqVH64/macbook-14-pro.webp",
+        "category": "macbooks",
+        "price": 1999.99,
+        "description": "Powerful MacBook Pro with M2 chip for professional workflows.",
+        "specifications": [
+            "14-inch Retina Display",
+            "16GB Unified Memory",
+            "1TB SSD"
+        ],
+        "availability": true,
+        "rating": 4.8
+    },
+    {
+        "product_id": 3,
+        "product_title": "Smartphone Y10",
+        "product_image": "https://i.ibb.co.com/j8LWk0W/y10.jpg",
+        "category": "phones",
+        "price": 599.99,
+        "description": "Affordable smartphone with stunning camera performance.",
+        "specifications": [
+            "64MP Camera",
+            "8GB RAM",
+            "128GB Storage"
+        ],
+        "availability": true,
+        "rating": 4.5
+    },
+    {
+        "product_id": 4,
+        "product_title": "iPhone 14 Pro",
+        "product_image": "https://i.ibb.co.com/6nD5w7t/iphone-14-pro.jpg",
+        "category": "iphones",
+        "price": 1099.99,
+        "description": "Flagship iPhone with Dynamic Island and ProMotion display.",
+        "specifications": [
+            "A16 Bionic",
+            "48MP Camera",
+            "6.1-inch Super Retina XDR"
+        ],
+        "availability": false,
+        "rating": 4.9
+    },
+    {
+        "product_id": 5,
+        "product_title": "Smart Watch Z5",
+        "product_image": "https://i.ibb.co.com/0M4Jp73/z5-watches.jpg",
+        "category": "smartwatches",
+        "price": 199.99,
+        "description": "Stylish smartwatch with health tracking and GPS.",
+        "specifications": [
+            "Heart Rate Monitor",
+            "7-Day Battery",
+            "Waterproof"
+        ],
+        "availability": true,
+        "rating": 4.4
+    },
+    
+    {
+        "product_id": 6,
+        "product_title": "Student Laptop Lite S5",
+        "product_image": "https://i.ibb.co.com/4gXpSdP/Student-Laptop-Lite-S5.jpg",
+        "category": "laptops",
+        "price": 499.99,
+        "description": "An affordable and lightweight laptop for students.",
+        "specifications": [
+            "13-inch HD Display",
+            "8GB RAM",
+            "256GB SSD",
+            "10-hour Battery Life"
+        ],
+        "availability": true,
+        "rating": 4.2
+    },
+
+    {
+        "product_id": 7,
+        "product_title": "Wireless Charger Pro",
+        "product_image": "https://i.ibb.co.com/N6B8ccJ/wireless-cg.jpg",
+        "category": "accessories",
+        "price": 49.99,
+        "description": "Fast wireless charger for all Qi-compatible devices.",
+        "specifications": [
+            "15W Fast Charging",
+            "LED Indicator",
+            "Compact Design"
+        ],
+        "availability": true,
+        "rating": 4.3
+    },
+    {
+        "product_id": 8,
+        "product_title": "Portable Power Bank 10K",
+        "product_image": "https://i.ibb.co.com/23YRVst/poerbank.jpg",
+        "category": "accessories",
+        "price": 29.99,
+        "description": "Compact power bank with high-capacity battery.",
+        "specifications": [
+            "10,000mAh",
+            "Dual USB Output",
+            "Fast Charging Support"
+        ],
+        "availability": true,
+        "rating": 4.4
+    },
+    {
+        "product_id": 9,
+        "product_title": "Business Laptop Elite B12",
+        "product_image": "https://i.ibb.co.com/K9Tbqsc/elite-x2.jpg",
+        "category": "laptops",
+        "price": 999.99,
+        "description": "A durable laptop tailored for business professionals.",
+        "specifications": [
+            "14-inch Full HD Display",
+            "16GB RAM",
+            "512GB SSD",
+            "Fingerprint Reader"
+        ],
+        "availability": true,
+        "rating": 4.4
+    },
+    {
+        "product_id": 10,
+        "product_title": "UltraBook Pro 15",
+        "product_image": "https://i.ibb.co.com/LhTjwNJ/ultra.jpg",
+        "category": "laptops",
+        "price": 1299.99,
+        "description": "Sleek and lightweight laptop for professionals.",
+        "specifications": [
+            "15-inch Display",
+            "1TB SSD",
+            "Intel i9 Processor"
+        ],
+        "availability": true,
+        "rating": 4.8
+    },
+    {
+        "product_id": 11,
+        "product_title": "Gaming Laptop GX10",
+        "product_image": "https://i.ibb.co.com/Bj1stp5/gx10.jpg",
+        "category": "laptops",
+        "price": 1499.99,
+        "description": "High-performance gaming laptop with RGB keyboard.",
+        "specifications": [
+            "32GB RAM",
+            "1TB SSD",
+            "NVIDIA RTX 3080"
+        ],
+        "availability": true,
+        "rating": 4.7
+    },
+    {
+        "product_id": 12,
+        "product_title": "Android Phone M50",
+        "product_image": "https://i.ibb.co.com/wM4vfg1/m50.jpg",
+        "category": "phones",
+        "price": 349.99,
+        "description": "Affordable smartphone with excellent battery life.",
+        "specifications": [
+            "5000mAh Battery",
+            "6GB RAM",
+            "64GB Storage"
+        ],
+        "availability": true,
+        "rating": 4.3
+    },
+    {
+        "product_id": 13,
+        "product_title": "iPhone SE (3rd Gen)",
+        "product_image": "https://i.ibb.co.com/Rcy5jcv/se.jpg",
+        "category": "iphones",
+        "price": 429.99,
+        "description": "Compact iPhone with powerful performance.",
+        "specifications": [
+            "A15 Bionic",
+            "4.7-inch Retina HD Display",
+            "64GB Storage"
+        ],
+        "availability": true,
+        "rating": 4.6
+    },
+    {
+        "product_id": 14,
+        "product_title": "Smart Watch X2",
+        "product_image": "https://i.ibb.co.com/4pvkrTZ/x2.jpg",
+        "category": "smartwatches",
+        "price": 249.99,
+        "description": "Premium smartwatch with voice assistant support.",
+        "specifications": [
+            "GPS",
+            "AMOLED Display",
+            "Sleep Tracking"
+        ],
+        "availability": false,
+        "rating": 4.5
+    },
+    {
+        "product_id": 15,
+        "product_title": "Fitness Band Y1",
+        "product_image": "https://i.ibb.co.com/frJ9b3W/y1.jpg",
+        "category": "smartwatches",
+        "price": 49.99,
+        "description": "Affordable fitness tracker with heart rate monitoring.",
+        "specifications": [
+            "Step Counter",
+            "5-Day Battery",
+            "Water Resistant"
+        ],
+        "availability": true,
+        "rating": 4.2
+    },
+    {
+        "product_id": 16,
+        "product_title": "Wireless Charging Dock",
+        "product_image": "https://i.ibb.co.com/HV2wsQX/charging-dock.jpg",
+        "category": "accessories",
+        "price": 59.99,
+        "description": "Multi-device charging dock for smartphones and accessories.",
+        "specifications": [
+            "3-in-1 Charging",
+            "Fast Wireless Charging",
+            "Compact"
+        ],
+        "availability": true,
+        "rating": 4.6
+    },
+ 
+    {
+        "product_id": 17,
+        "product_title": "Creative Studio Pro X",
+        "product_image": "https://i.ibb.co.com/kmzJXq9/cx.jpg",
+        "category": "laptops",
+        "price": 1899.99,
+        "description": "A high-performance laptop designed for creators and artists.",
+        "specifications": [
+            "4K Display",
+            "32GB RAM",
+            "1TB SSD",
+            "RTX 4060 GPU"
+        ],
+        "availability": true,
+        "rating": 4.9
+    },
+    {
+        "product_id": 18,
+        "product_title": "Gaming Beast GZ100",
+        "product_image": "https://i.ibb.co.com/2qrVdHx/gl.jpg",
+        "category": "laptops",
+        "price": 2199.99,
+        "description": "A top-tier gaming laptop for serious gamers.",
+        "specifications": [
+            "17-inch QHD Display",
+            "64GB RAM",
+            "2TB SSD",
+            "NVIDIA RTX 4090"
+        ],
+        "availability": false,
+        "rating": 4.8
+    }
+]
