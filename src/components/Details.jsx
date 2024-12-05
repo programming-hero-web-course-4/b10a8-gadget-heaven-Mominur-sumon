@@ -1,13 +1,57 @@
-
+import Swal from 'sweetalert2'
+import { useContext, useEffect } from 'react';
 import { useLoaderData, useParams } from 'react-router-dom';
-
+import { AppContext } from '../main';
 
 const Details = () => {
+
+
+    const {Cards, setCards, wishList, setWishList} = useContext(AppContext);
+
+    const handleAddToCart = (product) => {
+        if(Cards.find((card)=>card.product_id === product.product_id)){
+            Swal.fire({
+                icon: "error",
+                title: "Product already in cart!",
+                text: "You can only add one product at a time",
+                timer: 2000,
+              });
+            return;
+        }
+        setCards([...Cards, product]);
+        Swal.fire({
+            icon: "success",
+            title: "Product added to cart successfully!",
+            timer: 2000
+          });
+    }
+
+    const handleAddToWishList = (product) => {
+        if(wishList.find((card)=>card.product_id === product.product_id)){
+            Swal.fire({
+                icon: "error",
+                title: "Product already in wishlist!",
+                text: "You can only add one product at a time",
+                timer: 2000,
+              });
+            return;
+        }
+        setWishList([...wishList, product]);
+        Swal.fire({
+            icon: "success",
+            title: "Product added to Wishlist successfully!",
+            timer: 2000
+          });
+    }
+
+    useEffect(() => {
+        console.log("cards",Cards);
+        console.log(wishList);
+    }, [Cards, wishList]);
+
     const { id } = useParams();
     const products = useLoaderData();
-    console.log(products);
     const product = products.find((product) => product.product_id === Number(id));
-    console.log(product);
     const { product_title, product_image, price, availability, description, rating } = product;
     return (
         <div className='relative pb-96'>
@@ -20,7 +64,7 @@ const Details = () => {
                     <div className="hero-content flex-col lg:flex-row">
                         <img
                             src={product_image}
-                            className="" />
+                            className="w-1/3" />
                         <div>
                             <h1 className="text-3xl font-bold">{product_title}</h1>
                             <p className='font-semibold text-lg py-2'>Price: ${price}</p>
@@ -39,8 +83,8 @@ const Details = () => {
                                 <p><i class="fa-solid fa-star text-yellow-400"></i><i class="fa-solid fa-star text-yellow-400"></i><i class="fa-solid fa-star text-yellow-400"></i><i class="fa-solid fa-star text-yellow-400"></i><i class="fa-solid fa-star-half-stroke text-yellow-400 mr-5"></i><span className='border-2 px-3 rounded-2xl'>{rating}</span></p>
                             </div>
                             <div className='py-4 flex gap-5'>
-                                <button className="px-3 py-2 hover:bg-[#9835E2] rounded-full border-[#9835E2] border hover:text-white">Add To Card  <i class="fa-solid fa-cart-shopping"></i></button>
-                                <button className="px-3 py-2 hover:bg-[#9835E2] rounded-full border-[#9835E2] border hover:text-white"><i class="fa-regular fa-heart text-xl"></i></button>
+                                <button onClick={()=>handleAddToCart(product)} className="px-3 py-2 hover:bg-[#9835E2] rounded-full border-[#9835E2] border hover:text-white">Add To Card  <i class="fa-solid fa-cart-shopping"></i></button>
+                                <button onClick={()=>handleAddToWishList(product)} className="px-3 py-2 hover:bg-[#9835E2] rounded-full border-[#9835E2] border hover:text-white"><i class="fa-regular fa-heart text-xl"></i></button>
                             </div>
                         </div>
                     </div>
