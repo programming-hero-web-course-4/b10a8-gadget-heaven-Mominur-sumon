@@ -1,6 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { AppContext } from '../main';
 import SignleCard from '../components/SignleCard';
+import SingleWishList from '../components/SingleWishList';
 
 const Dashboard = () => {
     const { Cards,setCards, wishList, setwishList } = useContext(AppContext)
@@ -74,7 +75,18 @@ const Dashboard = () => {
                 }
 
 
-                {!cardsAtive && <h1>Wishlist</h1>}
+                {!cardsAtive && 
+
+                    <div> 
+                        <h1 className='text-2xl font-bold mt-5'>Wishlist</h1>
+                        {
+                            wishList.map((card) => (
+                                <SingleWishList card={card}></SingleWishList>
+                            ))
+                        }
+                    </div>
+                
+                }
             </div>
         </div>
     );
