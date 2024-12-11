@@ -1,8 +1,13 @@
 
 import Banner from '../components/Banner';
-import { Link, Outlet } from 'react-router-dom';
+import { Link, Outlet, useLocation } from 'react-router-dom';
 
 const Home = () => {
+    const location = useLocation();
+    if(location.pathname === '/'){
+        document.title = 'Gadget Heaven | Home';
+        
+    }
     return (
         <div className='font-sora'>
             <Banner></Banner>

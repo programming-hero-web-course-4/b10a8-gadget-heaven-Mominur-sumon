@@ -9,6 +9,7 @@ import AllProducts from "../components/AllProducts";
 import Details from "../components/Details";
 import Dashboard from "../pages/Dashboard";
 import History from "../pages/History";
+import NotFound from "../pages/NotFound";
 
 
 const router = createBrowserRouter([
@@ -31,7 +32,7 @@ const router = createBrowserRouter([
                         path: "/products/:category",
                         element: <AllProducts></AllProducts>,
                         loader: () => fetch('/products.json'),
-        
+
                     },
 
                 ]
@@ -43,12 +44,20 @@ const router = createBrowserRouter([
                 loader: () => fetch('/products.json'),
             },
             {
+                path: '/statistics',
+                element: <h2>I will Add This Later</h2>
+            },
+            {
                 path: '/dashboard',
                 element: <Dashboard></Dashboard>
             },
             {
                 path: '/purchaseHistory',
                 element: <History></History>
+            }, {
+
+                path: "*",
+                element: <NotFound></NotFound>
             }
         ]
     }

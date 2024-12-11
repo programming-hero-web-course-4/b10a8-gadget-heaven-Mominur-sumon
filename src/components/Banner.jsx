@@ -1,6 +1,8 @@
 import React from 'react';
 import bannerBg from '../assets/banner.jpg';
+
 const Banner = () => {
+
     return (
         <div className='mb-80'>
             <div className='bg-[#9538E2] text-center text-white'>

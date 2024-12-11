@@ -5,7 +5,7 @@ const History = () => {
     const { purchased } = useContext(AppContext);
     return (
         <div>
-            {purchased.length === 0 && <h1 className='text-2xl text-center mt-5 font-bold'>You Don't Purchased Any Product From Us</h1>}
+            {purchased.length === 0 && <h1 className='text-2xl text-center mt-5 font-bold'>You Did't Purchased Any Product From Us</h1>}
             {
                 purchased.length > 0 &&
                 <>

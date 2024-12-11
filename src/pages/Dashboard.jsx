@@ -97,6 +97,10 @@ const Dashboard = () => {
                             </div>
                         </div>
                         {
+                            Cards.length === 0 && <h1 className='text-2xl text-center mt-5 mb-32 font-bold'>Cart is Empty, <br /> Please Add Some Product To Cards</h1>
+
+                        }
+                        {
                             Cards.map((card) => (
                                 <SignleCard card={card}></SignleCard>
                             ))}
@@ -108,6 +112,9 @@ const Dashboard = () => {
 
                     <div> 
                         <h1 className='text-2xl font-bold mt-5'>Wishlist</h1>
+                        {
+                            wishList.length===0 && <h1 className='text-2xl text-center mt-5 mb-32 font-bold'>Wishlist is Empty, <br /> Please Add Some Product To Wishlist</h1>
+                        }
                         {
                             wishList.map((card) => (
                                 <SingleWishList card={card}></SingleWishList>

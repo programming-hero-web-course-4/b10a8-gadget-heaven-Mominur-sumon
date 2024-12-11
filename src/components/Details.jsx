@@ -1,13 +1,11 @@
 import Swal from 'sweetalert2'
 import { useContext, useEffect } from 'react';
-import { useLoaderData, useParams } from 'react-router-dom';
+import { useLoaderData, useLocation, useParams } from 'react-router-dom';
 import { AppContext } from '../main';
 
 const Details = () => {
 
-
     const {Cards, setCards, wishList, setWishList} = useContext(AppContext);
-
     const handleAddToCart = (product) => {
         if(Cards.find((card)=>card.product_id === product.product_id)){
             Swal.fire({
@@ -28,6 +26,7 @@ const Details = () => {
 
     const handleAddToWishList = (product) => {
         if(wishList.find((card)=>card.product_id === product.product_id)){
+            
             Swal.fire({
                 icon: "error",
                 title: "Product already in wishlist!",
@@ -84,7 +83,9 @@ const Details = () => {
                             </div>
                             <div className='py-4 flex gap-5'>
                                 <button onClick={()=>handleAddToCart(product)} className="px-3 py-2 hover:bg-[#9835E2] rounded-full border-[#9835E2] border hover:text-white">Add To Card  <i class="fa-solid fa-cart-shopping"></i></button>
-                                <button onClick={()=>handleAddToWishList(product)} className="px-3 py-2 hover:bg-[#9835E2] rounded-full border-[#9835E2] border hover:text-white"><i class="fa-regular fa-heart text-xl"></i></button>
+                                <button 
+                                disabled={wishList.includes(product)}
+                                onClick={()=>handleAddToWishList(product)} className={`px-3 py-2 hover:bg-[#9835E2] rounded-full border-[#9835E2] border hover:text-white ${wishList.includes(product)&&'disabled text-gray-500 border-gray-500 hover:bg-white hover:text-gray-500'}`}><i class="fa-regular fa-heart text-xl"></i></button>
                             </div>
                         </div>
                     </div>
