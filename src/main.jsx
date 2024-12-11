@@ -10,9 +10,10 @@ export const AppContext = createContext();
 export const AppProvider = ({ children }) => {
   const [Cards, setCards] = useState([]);
   const [wishList, setWishList] = useState([]);
+  const [purchased, setPurchased] = useState([]);
 
   return (
-    <AppContext.Provider value={{ Cards, setCards, wishList, setWishList }}>
+    <AppContext.Provider value={{ Cards, setCards, wishList, setWishList,purchased, setPurchased }}>
       {children}
     </AppContext.Provider>
   );

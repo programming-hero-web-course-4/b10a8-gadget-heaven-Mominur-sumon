@@ -2,10 +2,11 @@ import React, { useContext, useEffect, useState } from 'react';
 import { AppContext } from '../main';
 import SignleCard from '../components/SignleCard';
 import SingleWishList from '../components/SingleWishList';
+import Swal from 'sweetalert2';
+import successImg from '../assets/success.png';
 
 const Dashboard = () => {
-    const { Cards,setCards, wishList, setwishList } = useContext(AppContext)
-    console.log(Cards);
+    const { Cards,setCards, wishList, setwishList,purchased, setPurchased } = useContext(AppContext);
     
     const [cardsAtive, setCardsActive] = useState(true);
     const [totalPrices, setTotalPrices] = useState(0);
@@ -13,6 +14,7 @@ const Dashboard = () => {
         const totalPrices = Cards.reduce((acc, item) => acc + item.price, 0);
         setTotalPrices(totalPrices);
     }, [Cards]);
+
     const handleCards = () => {
         setCardsActive(true);
     }
@@ -22,6 +24,15 @@ const Dashboard = () => {
     }
 
     const handleSortByPrice = () => {
+        if(Cards.length === 0){
+            Swal.fire({
+                icon: "error",
+                title: "Cart is empty!",
+                text: "Please add some products to cart",
+                timer: 2000,
+              });
+            return;
+        }
         const sortedCards = [...Cards].sort((a, b) => a.price - b.price);
         setCards(sortedCards);
        
@@ -29,6 +40,24 @@ const Dashboard = () => {
     }
 
     const handlePusrchases = () => {
+        if(Cards.length === 0){
+            Swal.fire({
+                icon: "error",
+                title: "Cart is empty!",
+                text: "Please add some products to cart",
+                timer: 2000,
+              });
+            return;
+        }
+        Swal.fire({
+            title: "Payment Successfully!",
+            text: "Thank you for purchasing from us",
+            text: "Total : $"+totalPrices.toFixed(2),
+            imageUrl: successImg,
+                        
+           
+          });
+        setPurchased([...purchased, ...Cards]);
         setCards([]);
     }
 

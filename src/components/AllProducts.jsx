@@ -9,7 +9,6 @@ const AllProducts = () => {
     const { category } = useParams();
     const loaderProducts = useLoaderData();
     const [products, setProducts] = useState(loaderProducts);
-    console.log(products);
     useEffect(() => {
         if (category) {
             const filteredProducts = loaderProducts.filter((product) => product.category === category);

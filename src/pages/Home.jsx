@@ -1,9 +1,8 @@
 
 import Banner from '../components/Banner';
-import { Link, Outlet, useLoaderData } from 'react-router-dom';
+import { Link, Outlet } from 'react-router-dom';
 
 const Home = () => {
-    const products = useLoaderData();
     return (
         <div className='font-sora'>
             <Banner></Banner>

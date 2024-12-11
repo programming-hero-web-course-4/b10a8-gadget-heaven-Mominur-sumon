@@ -8,6 +8,7 @@ import MainLayout from "../layouts/MainLayout";
 import AllProducts from "../components/AllProducts";
 import Details from "../components/Details";
 import Dashboard from "../pages/Dashboard";
+import History from "../pages/History";
 
 
 const router = createBrowserRouter([
@@ -44,6 +45,10 @@ const router = createBrowserRouter([
             {
                 path: '/dashboard',
                 element: <Dashboard></Dashboard>
+            },
+            {
+                path: '/purchaseHistory',
+                element: <History></History>
             }
         ]
     }
